@@ -47,11 +47,11 @@ Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o terminal na 
 
 Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
 
-Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-cadastro-funcionarios.sql" localizado na pasta
+Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-cadastro-demandas.sql" localizado na pasta
 > public/dump
 
 
-Nesse arquivo temos o banco chamado "cadastro_funcionarios" e duas tabelas: "dados_funcionarios" e "telefone_funcionario". Temos como exemplo 3 funcionários cadastrados, cada um com seus respectivos telefones. O login do banco é "root" e a senha é vazia.
+Nesse arquivo temos o banco chamado "cadastro_demanda" e uma tabela "dados_demanda". Temos como exemplo 2 demandas cadastradas. O login do banco é "root" e a senha é vazia.
 
 Depois de configurar o Virtual host e de importar o banco, acesse "http://sistema-cadastro-demandas" e clique em "public".
 
@@ -59,7 +59,7 @@ Se der um erro na exibição da página, renomeie o arquivo ".env.example" para 
 > php artisan key:generate
 
 
-Se você renomeou o ".env.example" para ".env" (ou o criou), digite neste ".env" o seguinte: "DB_DATABASE=cadastro_funcionarios", "DB_USERNAME=root", "DB_PASSWORD=".
+Se você renomeou o ".env.example" para ".env" (ou o criou), digite neste ".env" o seguinte: "DB_DATABASE=cadastro_demanda", "DB_USERNAME=root", "DB_PASSWORD=".
 
 ## Imagem do Projeto
 
