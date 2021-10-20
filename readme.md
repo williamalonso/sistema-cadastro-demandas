@@ -9,21 +9,21 @@ Este readme está dividido em:
 
 ## Descrição
 
-Trata-se de um sistema desenvolvido em Laravel 5.5 para fins didáticos onde o usuário pode cadastrar/alterar/deletar seus funcionários. O sistema é responsivo, fazendo uso do framework Bootstrap.
+Trata-se de um sistema desenvolvido em Laravel 5.5 para fins didáticos onde o usuário pode cadastrar/alterar/deletar suas demandas de serviço. O sistema é responsivo, fazendo uso do framework Bootstrap.
 
 ## Funcionalidades
 
 Tela de Home:
-  Na tela de home temos uma tabela onde é possível pesquisar por nome, profissão, idade, entre outros dados dos funcionários. Foi utilizado o plugin Datatable do JQuery para a construção dessa tabela. Os funcionários são listados diretamente do banco. Aqui os dados são listados usando uma cláusula Join, pois temos 2 tabelas no sistema (uma com os dados dos funcionários e uma separada com opções de telefone deste usuário). Ao passar o mouse pela foto do funcionário, sua escala é levementa aumentada.
+  Na tela de home temos uma tabela onde é possível pesquisar por data de abertura, conclusão, região administrativa, tipo de demanda e status. Foi utilizado o plugin Datatable do JQuery para a construção dessa tabela. As demandas são listados diretamente do banco.
 
 Tela de Cadastro:
-  Na tela de cadastro de funcionários temos um formulário e os campos são validados com o plugin jQuery Mask. Após o cadastro, o usuário é redirecionado para a home e uma flash message é exibida durante 3 segundos.
+  Na tela de cadastro de demandas temos um formulário também responsivo. Após o cadastro, o usuário é redirecionado para a home e uma flash message é exibida durante 3 segundos.
 
-Botão para alterar dados de funcionário:
-  Na tela inicial podemos alterar os dados dos funcionários. A página vai trazer os dados que foram inseridos anteriormente na tela de cadastro. Os campos aqui também são validados com o plugin jQuery Mask. Também é exibido uma flash message caso a alteração ocorra com sucesso ou apresente erro.
+Botão para alterar demanda:
+  Na tela inicial podemos alterar os dados das demandas. A página vai trazer os dados que foram inseridos anteriormente na tela de cadastro. Também é exibido uma flash message caso a alteração ocorra com sucesso ou apresente erro.
 
-Botão para deletar funcionário:
-  Ao clicar em deletar funcionário, ele será deletado na tabela do banco e consequentemente da página Home. Também é exibido uma flash message. Ao deletar um funcionário, o auto incremento no banco é resetado, evitando que o campo 'id' pule do valor 1 para o 3 por exemplo, ao cadastrar novos usuários.
+Botão para deletar demanda:
+  Ao clicar em deletar demanda, ela será deletada na tabela do banco e consequentemente da página Home. Também é exibido uma flash message.
 
 ## Como instalar
 
@@ -47,13 +47,13 @@ Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o terminal na 
 
 Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
 
-Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-cadastro-funcionarios" localizado na pasta
+Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-cadastro-funcionarios.sql" localizado na pasta
 > public/dump
 
 
 Nesse arquivo temos o banco chamado "cadastro_funcionarios" e duas tabelas: "dados_funcionarios" e "telefone_funcionario". Temos como exemplo 3 funcionários cadastrados, cada um com seus respectivos telefones. O login do banco é "root" e a senha é vazia.
 
-Depois de configurar o Virtual host e de importar o banco, acesse "http://sistema-cadastro-funcionarios" e clique em "public".
+Depois de configurar o Virtual host e de importar o banco, acesse "http://sistema-cadastro-demandas" e clique em "public".
 
 Se der um erro na exibição da página, renomeie o arquivo ".env.example" para ".env" (caso não exista, crie-o) e digite o comando (na pasta raíz do projeto):
 > php artisan key:generate
