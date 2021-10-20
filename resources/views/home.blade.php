@@ -1,5 +1,5 @@
 @extends('layout.index')
-@section('titulo', 'Cadastro')
+@section('titulo', 'Cadastro de Demandas')
 @section('conteudo')
     <main>
     <!-- Flash Message -->

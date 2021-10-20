@@ -1,11 +1,11 @@
 @extends('layout.index')
-@section('titulo', 'Cadastrar Usuario')
+@section('titulo', 'Cadastrar Demanda')
 @section('conteudo')
 
     <div class="card border-light">
         <div class="card-body">
             <section id="titulo">
-                <h1 class="text-center pt-4">Inserir Dados Teste</h1>
+                <h1 class="text-center pt-4">Inserir Dados</h1>
             </section>
         </div>
     </div>
