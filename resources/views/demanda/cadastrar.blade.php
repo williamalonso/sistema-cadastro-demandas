@@ -12,65 +12,32 @@
     <div class="container">
         <form class="m-5" action="{{route('cadastrar.demanda')}}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
+
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2">Data de Abertura</label>
+                <label class="col-lg-3 control-label text-lg-right pt-2" for="nome">Nome</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="date" class="form-control sem_numero" id="data_abertura" tabindex="1" name="data_abertura">
+                    <input type="text" class="form-control" id="id_nome" tabindex="1" name="Nome">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2">Data para Conclusão</label>
+                <label class="col-lg-3 control-label text-lg-right pt-2" for="telefone">Telefone</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="date" class="form-control" id="data_conclusao" tabindex="2" name="data_conclusao">
+                    <input type="number" class="form-control" id="id_telefone" tabindex="2" name="Telefone" placeholder="Digite sem traços">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2" for="regiao_adm">Região Administrativa</label>
-                <div class="col-lg-6">
-                    <select  name="regiao_adm" class="form-control" id="id_regiao_adm" tabindex="3">
-                        <option value="">Selecione uma região</option>
-                        <option value="I - Gama">I - Gama</option>
-                        <option value="II - Taguatinga">II - Taguatinga</option>
-                        <option value="III - Brazlândia">III - Brazlândia</option>
-                        <option value="IV - Sobradinho">IV - Sobradinho</option>
-                        <option value="V - Planaltina">V - Planaltina</option>
-                        <option value="VI - Paranoá">VI - Paranoá</option>
-                        <option value="VII - Núcleo Bandeirante">VII - Núcleo Bandeirante</option>
-                        <option value="VIII - Ceilândia">VIII - Ceilândia</option>
-                        <option value="IX - Guará">IX - Guará</option>
-                        <option value="X - Cruzeiro">X - Cruzeiro</option>
-                        <option value="XI - Samambaia"> XI - Samambaia</option>
-                        <option value="XII - Santa Maria">XII - Santa Maria</option>
-                        <option value="XIII - São Sebastião">XIII - São Sebastião</option>
-                        <option value="XIV - Recanto das Emas">XIV - Recanto das Emas</option>
-                        <option value="XV - Lago Sul">XV - Lago Sul</option>
-                        <option value="XVI - Riacho Fundo">XVI - Riacho Fundo</option>
-                        <option value="XVII - Lago Norte">XVII - Lago Norte</option>
-                        <option value="XVIII - Candangolândia">XVIII - Candangolândia</option>
-                        <option value="XIX - Águas Claras">XIX - Águas Claras</option>
-                        <option value="XX - Riacho Fundo 2">XX - Riacho Fundo 2</option>
-                        <option value="XXI - Sudoeste/Octogonal">XXI - Sudoeste/Octogonal</option>
-                        <option value="XXII - Varjão">XXII - Varjão</option>
-                        <option value="XXIII - Park Way">XXIII - Park Way</option>
-                        <option value="XXIV - Estrutural/Scia">XXIV - Estrutural/Scia</option>
-                        <option value="XXV - Sobradinho II">XXV - Sobradinho II</option>
-                        <option value="XXVI - Jardim Botânico">XXVI - Jardim Botânico</option>
-                        <option value="XXVII - Itapoã">XXVII - Itapoã</option>
-                        <option value="XXVIII - SIA">XXVIII - SIA</option>
-                        <option value="XXIX - Vicente Pires">XXIX - Vicente Pires</option>
-                        <option value="XXX - Fercal">XXX - Fercal</option>
-                        <option value="XXXI - Sol Nascente/Pôr do Sol">XXXI - Sol Nascente/Pôr do Sol</option>
-                        <option value="XXXII - Arniqueira">XXXII - Arniqueira</option>
-                    </select>
+                <label class="col-lg-3 control-label text-lg-right pt-2">Data de Visita</label>
+                <div class="col-lg-6 input-group mb-2">
+                    <input type="date" class="form-control sem_numero" id="id_data_visita" tabindex="3" name="DataVisita">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="tipo_demanda">Tipo de Demanda</label>
                 <div class="col-lg-6">
-                    <select  name="tipo_demanda" class="form-control" id="id_tipo_demanda" tabindex="4">
+                    <select  name="Demanda" class="form-control" id="id_tipo_demanda" tabindex="4">
                         <option value="">Selecione uma demanda</option>
                         <option value="1.1 - PAISAGISMO/ARVORES">1.1 - PAISAGISMO/ARVORES</option>
                         <option value="1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES">1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES</option>
@@ -129,44 +96,71 @@
             </div>
 
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2" for="status_demanda">Status da Demanda</label>
+                <label class="col-lg-3 control-label text-lg-right pt-2" for="regiao_adm">Região Administrativa</label>
                 <div class="col-lg-6">
-                    <select  name="status_demanda" class="form-control" id="id_status_demanda" tabindex="5">
-                        <option value="">Selecione um status</option>
-                        <option value="1 - Em Projeto">1 - Em Projeto</option>
-                        <option value="2 - Orçamento">2 - Orçamento</option>
-                        <option value="3 - Termo de Referência">3 - Termo de Referência</option>
-                        <option value="4 - Pronto para Licitar">4 - Pronto para Licitar</option>
-                        <option value="5 - Em Licitação">5 - Em Licitação</option>
-                        <option value="6 - Homologado">6 - Homologado</option>
-                        <option value="7 - Em Contratação">7 - Em Contratação</option>
-                        <option value="8 - Em Execução">8 - Em Execução</option>
-                        <option value="9 - Concluído">9 - Concluído</option>
-                        <option value="10 - Ata de Registro de Preço">10 - Ata de Registro de Preço</option>
-                        <option value="11 - Suspensa - TCDF">11 - Suspensa - TCDF</option>
-                        <option value="12 - Extra">12 - Extra</option>
+                    <select  name="Cidade" class="form-control" id="id_regiao_adm" tabindex="5">
+                        <option value="">Selecione uma região</option>
+                        <option value="I - Gama">I - Gama</option>
+                        <option value="II - Taguatinga">II - Taguatinga</option>
+                        <option value="III - Brazlândia">III - Brazlândia</option>
+                        <option value="IV - Sobradinho">IV - Sobradinho</option>
+                        <option value="V - Planaltina">V - Planaltina</option>
+                        <option value="VI - Paranoá">VI - Paranoá</option>
+                        <option value="VII - Núcleo Bandeirante">VII - Núcleo Bandeirante</option>
+                        <option value="VIII - Ceilândia">VIII - Ceilândia</option>
+                        <option value="IX - Guará">IX - Guará</option>
+                        <option value="X - Cruzeiro">X - Cruzeiro</option>
+                        <option value="XI - Samambaia"> XI - Samambaia</option>
+                        <option value="XII - Santa Maria">XII - Santa Maria</option>
+                        <option value="XIII - São Sebastião">XIII - São Sebastião</option>
+                        <option value="XIV - Recanto das Emas">XIV - Recanto das Emas</option>
+                        <option value="XV - Lago Sul">XV - Lago Sul</option>
+                        <option value="XVI - Riacho Fundo">XVI - Riacho Fundo</option>
+                        <option value="XVII - Lago Norte">XVII - Lago Norte</option>
+                        <option value="XVIII - Candangolândia">XVIII - Candangolândia</option>
+                        <option value="XIX - Águas Claras">XIX - Águas Claras</option>
+                        <option value="XX - Riacho Fundo 2">XX - Riacho Fundo 2</option>
+                        <option value="XXI - Sudoeste/Octogonal">XXI - Sudoeste/Octogonal</option>
+                        <option value="XXII - Varjão">XXII - Varjão</option>
+                        <option value="XXIII - Park Way">XXIII - Park Way</option>
+                        <option value="XXIV - Estrutural/Scia">XXIV - Estrutural/Scia</option>
+                        <option value="XXV - Sobradinho II">XXV - Sobradinho II</option>
+                        <option value="XXVI - Jardim Botânico">XXVI - Jardim Botânico</option>
+                        <option value="XXVII - Itapoã">XXVII - Itapoã</option>
+                        <option value="XXVIII - SIA">XXVIII - SIA</option>
+                        <option value="XXIX - Vicente Pires">XXIX - Vicente Pires</option>
+                        <option value="XXX - Fercal">XXX - Fercal</option>
+                        <option value="XXXI - Sol Nascente/Pôr do Sol">XXXI - Sol Nascente/Pôr do Sol</option>
+                        <option value="XXXII - Arniqueira">XXXII - Arniqueira</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2" for="demandante">Demandante</label>
+                <label class="col-lg-3 control-label text-lg-right pt-2" for="sei">Sei</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="demandante" tabindex="6" name="demandante">
+                    <input type="text" class="form-control" id="id_sei" tabindex="6" name="Sei">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
-                <label class="col-lg-3 control-label text-lg-right pt-2" for="assessor_responsavel">Assessor Responsável</label>
+                <label class="col-lg-3 control-label text-lg-right pt-2">Data para Conclusão</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="assessor_responsavel" tabindex="7" name="assessor_responsavel">
+                    <input type="date" class="form-control" id="id_data_conclusao" tabindex="7" name="DataConclusao">
                 </div>
             </div>
 
+            <div class="form-group row mt-5 mb-5">
+                <label class="col-lg-3 control-label text-lg-right pt-2" for="andamento">Andamento</label>
+                <div class="col-lg-6 input-group mb-2">
+                    <input type="text" class="form-control" id="id_andamento" tabindex="8" name="Andamento">
+                </div>
+            </div>
+            
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="observacao">Observação</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <textarea class="form-control" name="observacao" id="observacao" aria-label="With textarea" tabindex="8"></textarea>
+                    <textarea class="form-control" name="Observacoes" id="id_observacao" aria-label="With textarea" tabindex="9"></textarea>
                 </div>
             </div>
 
@@ -174,8 +168,8 @@
 
             <div class="form-group row">
                 <div class="col-sm-9 control-label text-lg-center pt-2">
-                    <button class="btn btn-primary" tabindex="9">Enviar</button>
-                    <button type="reset" class="btn btn-default" tabindex="10">Limpar</button>
+                    <button class="btn btn-primary" tabindex="10">Enviar</button>
+                    <button type="reset" class="btn btn-default" tabindex="11">Limpar</button>
                 </div>
             </div>
         </form>

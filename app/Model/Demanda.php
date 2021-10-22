@@ -9,28 +9,28 @@ class Demanda extends Model
 {
     public $timestamps = false;
     protected $primaryKey = 'id';
-    protected $table = "dados_demanda";
+    protected $table = "demandas";
     protected $fillable = [
-        'id', 'data_abertura', 'data_conclusao', 'regiao_adm', 'tipo_demanda', 'status_demanda', 'demandante', 'assessor_responsavel', 'observacao',
+        'id', 'Nome', 'Telefone', 'DataVisita', 'Demanda', 'Cidade', 'Sei', 'DataConclusao', 'Andamento', 'Observacoes',
     ];
 
     public static function lista() { //traz os dados da tabela
-        $conn = DB::connection('mysql')->select("SELECT * from dados_demanda "); 
+        $conn = DB::connection('mysql')->select("SELECT * from demandas "); 
         return $conn;
     }
 
     public static function dados($id) { //traz os dados do 'id' específico
-        $conn = DB::table('dados_demanda')
+        $conn = DB::table('demandas')
                         ->select('*')
-                        ->from('dados_demanda')
-                        ->where('dados_demanda.id', '=', $id)
+                        ->from('demandas')
+                        ->where('demandas.id', '=', $id)
                         ->first();
         return $conn;
     }
 
     public static function salva($id, $data) { //função para salvar os dados editados da demanda
-        $conn = DB::table('dados_demanda')
-                        ->where('dados_demanda.id', '=', $id)
+        $conn = DB::table('demandas')
+                        ->where('demandas.id', '=', $id)
                         ->update($data);
         return $conn;
     }

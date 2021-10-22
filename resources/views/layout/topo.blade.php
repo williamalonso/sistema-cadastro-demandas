@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('site.cadastrar')}}">Cadastrar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('site.login.sair')}}">Deslogar</a>
+                    </li>
                 </ul>
             </div>
         </nav>

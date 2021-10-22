@@ -19,14 +19,15 @@ class CadastroController extends Controller
         
         $dados = new Demanda();
 
-        $dados->data_abertura = $req->data_abertura;
-        $dados->data_conclusao = $req->data_conclusao;
-        $dados->regiao_adm = $req->regiao_adm;
-        $dados->tipo_demanda = $req->tipo_demanda;
-        $dados->status_demanda = $req->status_demanda;
-        $dados->demandante = $req->demandante;
-        $dados->assessor_responsavel = $req->assessor_responsavel;
-        $dados->observacao = $req->observacao;
+        $dados->Nome = $req->Nome;
+        $dados->Telefone = $req->Telefone;
+        $dados->DataVisita = $req->DataVisita;
+        $dados->Demanda = $req->Demanda;
+        $dados->Cidade = $req->Cidade;
+        $dados->Sei = $req->Sei;
+        $dados->DataConclusao = $req->DataConclusao;
+        $dados->Andamento = $req->Andamento;
+        $dados->Observacoes = $req->Observacoes;
 
         if($dados->save()){ //salva os dados na tabela
             Session::flash('message', 'A Demanda foi cadastrada com sucesso!');
@@ -47,9 +48,12 @@ class CadastroController extends Controller
 
     public function EditarDemanda(Request $request, $id){
         
-        $data = $request->except('_token');
+        //$data = $request->all();
         
-        if(Demanda::salva($id, $data)) {
+        $data = $request->except('_token');
+        $n_id = $id;
+
+        if(Demanda::salva($n_id, $data)) {
             Session::flash('message', 'A demanda foi atualizada com sucesso!');
             Session::flash('alert-class', 'alert-success');
         }else{

@@ -12,12 +12,21 @@
 */
 
 
-
-Route::get('/', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
+/* Home */
+Route::get('/home', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
 
 /* Rotas da Demanda*/
-Route::get('/tela/cadastrar', ['as'=>'site.cadastrar', 'uses'=>'Demanda\CadastroController@IndexNovoCadastro']);
-Route::post('/cadastrar/demanda', ['as'=>'cadastrar.demanda', 'uses'=>'Demanda\CadastroController@CadastrarNovaDemanda']);
-Route::get('/detalhes/demanda/{id}', ['as'=>'detalhes.demanda', 'uses'=>'Demanda\CadastroController@detalhes']);
-Route::post('/editar/cadastro/demanda/{id}', ['as'=>'editar.demanda', 'uses'=>'Demanda\CadastroController@EditarDemanda']);
-Route::get('/excluir/{id}', ['as'=>'excluir', 'uses'=>'Demanda\CadastroController@excluir']);
+Route::group([ 'middleware' => 'auth' ], function(){
+    Route::get('/tela/cadastrar', ['as'=>'site.cadastrar', 'uses'=>'Demanda\CadastroController@IndexNovoCadastro']);
+    Route::post('/cadastrar/demanda', ['as'=>'cadastrar.demanda', 'uses'=>'Demanda\CadastroController@CadastrarNovaDemanda']);
+    Route::get('/detalhes/demanda/{id}', ['as'=>'detalhes.demanda', 'uses'=>'Demanda\CadastroController@detalhes']);
+    Route::post('/editar/cadastro/demanda/{id}', ['as'=>'editar.demanda', 'uses'=>'Demanda\CadastroController@EditarDemanda']);
+    Route::get('/excluir/{id}', ['as'=>'excluir', 'uses'=>'Demanda\CadastroController@excluir']);
+});
+
+/* Login */
+Route::get('/', ['as'=>'site.login', 'uses'=>'Login\LoginController@index']);
+Route::get('/login/cadastrar', ['as'=>'site.login.cadastrar', 'uses'=>'Login\LoginController@CadastrarNovoUsuario']);
+Route::post('/salvarusuario', ['as'=>'site.salvarusuario', 'uses'=>'Login\LoginController@SalvarNovoUsuario']);
+Route::post('/login/entrar', ['as'=>'site.login.entrar', 'uses'=>'Login\LoginController@entrar']);
+Route::get('/login/sair', ['as'=>'site.login.sair', 'uses'=>'Login\LoginController@sair']);
