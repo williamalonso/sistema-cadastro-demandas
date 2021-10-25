@@ -30,7 +30,7 @@
             <table class="table text-center" id="tabela-principal">
                 <thead>
                     <tr>
-                    <th >ID</th>
+                    <th style="display: none">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Telefone</th>
                     <th scope="col">Data da Visita</th>
@@ -46,7 +46,7 @@
                 <tbody>
                     @foreach($registros as $key)
                         <tr>
-                            <td >{{$key->id}}</td>
+                            <td style="display: none">{{$key->id}}</td>
                             <td>{{$key->nome}}</td>
                             <td>{{$key->telefone}}</td>
                             <td>{{$key->datavisita}}</td>

@@ -16,7 +16,7 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="nome">Nome</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="id_nome" tabindex="1" name="Nome">
+                    <input type="text" class="form-control" id="id_nome" tabindex="1" name="nome">
                 </div>
             </div>
 
