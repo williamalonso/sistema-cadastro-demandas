@@ -47,15 +47,15 @@
                     @foreach($registros as $key)
                         <tr>
                             <td >{{$key->id}}</td>
-                            <td>{{$key->Nome}}</td>
-                            <td>{{$key->Telefone}}</td>
-                            <td>{{$key->DataVisita}}</td>
-                            <td>{{$key->Demanda}}</td>
-                            <td>{{$key->Cidade}}</td>
-                            <td>{{$key->Sei}}</td>
-                            <td>{{$key->DataConclusao}}</td>
-                            <td>{{$key->Andamento}}</td>
-                            <td>{{$key->Observacoes}}</td>
+                            <td>{{$key->nome}}</td>
+                            <td>{{$key->telefone}}</td>
+                            <td>{{$key->datavisita}}</td>
+                            <td>{{$key->demanda}}</td>
+                            <td>{{$key->cidade}}</td>
+                            <td>{{$key->sei}}</td>
+                            <td>{{$key->dataconclusao}}</td>
+                            <td>{{$key->andamento}}</td>
+                            <td>{{$key->observacoes}}</td>
                             <td>
                                 <a href= "{{ route('detalhes.demanda', $key->id) }}" type="button"  title="Editar" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
                                 <a href= "{{ route('excluir', $key->id) }}" type="button"  title="Excluir" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>

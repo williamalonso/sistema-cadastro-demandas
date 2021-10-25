@@ -11,7 +11,7 @@ class Demanda extends Model
     protected $primaryKey = 'id';
     protected $table = "demandas";
     protected $fillable = [
-        'id', 'Nome', 'Telefone', 'DataVisita', 'Demanda', 'Cidade', 'Sei', 'DataConclusao', 'Andamento', 'Observacoes',
+        'id', 'nome', 'telefone', 'datavisita', 'demanda', 'cidade', 'sei', 'dataconclusao', 'andamento', 'observacoes',
     ];
 
     public static function lista() { //traz os dados da tabela

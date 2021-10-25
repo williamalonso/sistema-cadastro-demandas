@@ -19,15 +19,15 @@ class CadastroController extends Controller
         
         $dados = new Demanda();
 
-        $dados->Nome = $req->Nome;
-        $dados->Telefone = $req->Telefone;
-        $dados->DataVisita = $req->DataVisita;
-        $dados->Demanda = $req->Demanda;
-        $dados->Cidade = $req->Cidade;
-        $dados->Sei = $req->Sei;
-        $dados->DataConclusao = $req->DataConclusao;
-        $dados->Andamento = $req->Andamento;
-        $dados->Observacoes = $req->Observacoes;
+        $dados->nome = $req->nome;
+        $dados->telefone = $req->telefone;
+        $dados->datavisita = $req->datavisita;
+        $dados->demanda = $req->demanda;
+        $dados->cidade = $req->cidade;
+        $dados->sei = $req->sei;
+        $dados->dataconclusao = $req->dataconclusao;
+        $dados->andamento = $req->andamento;
+        $dados->observacoes = $req->observacoes;
 
         if($dados->save()){ //salva os dados na tabela
             Session::flash('message', 'A Demanda foi cadastrada com sucesso!');

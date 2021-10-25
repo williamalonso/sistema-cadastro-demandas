@@ -23,21 +23,21 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="telefone">Telefone</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="number" class="form-control" id="id_telefone" tabindex="2" name="Telefone" placeholder="Digite sem traços">
+                    <input type="number" class="form-control" id="id_telefone" tabindex="2" name="telefone" placeholder="Digite sem traços">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2">Data de Visita</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="date" class="form-control sem_numero" id="id_data_visita" tabindex="3" name="DataVisita">
+                    <input type="date" class="form-control sem_numero" id="id_data_visita" tabindex="3" name="datavisita">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="tipo_demanda">Tipo de Demanda</label>
                 <div class="col-lg-6">
-                    <select  name="Demanda" class="form-control" id="id_tipo_demanda" tabindex="4">
+                    <select  name="demanda" class="form-control" id="id_tipo_demanda" tabindex="4">
                         <option value="">Selecione uma demanda</option>
                         <option value="1.1 - PAISAGISMO/ARVORES">1.1 - PAISAGISMO/ARVORES</option>
                         <option value="1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES">1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES</option>
@@ -98,7 +98,7 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="regiao_adm">Região Administrativa</label>
                 <div class="col-lg-6">
-                    <select  name="Cidade" class="form-control" id="id_regiao_adm" tabindex="5">
+                    <select  name="cidade" class="form-control" id="id_regiao_adm" tabindex="5">
                         <option value="">Selecione uma região</option>
                         <option value="I - Gama">I - Gama</option>
                         <option value="II - Taguatinga">II - Taguatinga</option>
@@ -139,28 +139,28 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="sei">Sei</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="id_sei" tabindex="6" name="Sei">
+                    <input type="text" class="form-control" id="id_sei" tabindex="6" name="sei">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2">Data para Conclusão</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="date" class="form-control" id="id_data_conclusao" tabindex="7" name="DataConclusao">
+                    <input type="date" class="form-control" id="id_data_conclusao" tabindex="7" name="dataconclusao">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="andamento">Andamento</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="id_andamento" tabindex="8" name="Andamento">
+                    <input type="text" class="form-control" id="id_andamento" tabindex="8" name="andamento">
                 </div>
             </div>
             
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="observacao">Observação</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <textarea class="form-control" name="Observacoes" id="id_observacao" aria-label="With textarea" tabindex="9"></textarea>
+                    <textarea class="form-control" name="observacoes" id="id_observacao" aria-label="With textarea" tabindex="9"></textarea>
                 </div>
             </div>
 
