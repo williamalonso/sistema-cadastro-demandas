@@ -12,11 +12,9 @@
 */
 
 
-/* Home */
-Route::get('/home', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
-
 /* Rotas da Demanda*/
 Route::group([ 'middleware' => 'auth' ], function(){
+    Route::get('/home', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
     Route::get('/tela/cadastrar', ['as'=>'site.cadastrar', 'uses'=>'Demanda\CadastroController@IndexNovoCadastro']);
     Route::post('/cadastrar/demanda', ['as'=>'cadastrar.demanda', 'uses'=>'Demanda\CadastroController@CadastrarNovaDemanda']);
     Route::get('/detalhes/demanda/{id}', ['as'=>'detalhes.demanda', 'uses'=>'Demanda\CadastroController@detalhes']);
