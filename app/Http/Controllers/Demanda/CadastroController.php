@@ -46,6 +46,11 @@ class CadastroController extends Controller
         return view('demanda.editardemanda', compact('registro'));
     }
 
+    public function VisualizarDemanda($id) {
+        $registro = Demanda::visualizar($id);
+        return view('demanda.visualizar', compact('registro'));
+    }
+
     public function EditarDemanda(Request $request, $id){
         
         //$data = $request->all();

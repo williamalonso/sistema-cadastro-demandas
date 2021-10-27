@@ -30,7 +30,7 @@
     <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{{route('site.home')}}">Nome da Empresa</a>
+            <a class="navbar-brand" href="{{route('site.home')}}">Novacap</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,6 +56,8 @@
         @if(Session::has('message'))
             @if(Session::get('message') == "Login ou senha incorretos!")
                 <p class="alert alert-danger text-center mt-2 alerta" role="alert">{{ Session::get('message') }}</p>
+            @elseif(Session::get('message') == "Conta criada com sucesso!")
+                <p class="alert alert-success text-center mt-2 alerta" role="alert">{{ Session::get('message') }}</p>
             @else
                 <p class="alert alert-success text-center mt-2 alerta" role="alert">{{ Session::get('message') }}</p>
             @endif
@@ -115,7 +117,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <p class="text-light m-0 text-center pt-1">&copy; Tudo o que quiser colocar aqui</p>
+                    <p class="text-light m-0 text-center pt-1">&copy; Novacap</p>
                 </div>
                 </div>
             </div>

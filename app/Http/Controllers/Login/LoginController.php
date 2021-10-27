@@ -70,8 +70,8 @@ class LoginController extends Controller
             Session::flash('message', 'Conta criada com sucesso!');
             Session::flash('alert-class', 'alert-success');
         }
-
-        return redirect()->route('site.home'); // redireciona para tela inicial
+        
+        return redirect()->route('site.login'); // redireciona para realizar login
     }
 
 }

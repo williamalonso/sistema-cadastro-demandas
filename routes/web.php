@@ -17,6 +17,7 @@ Route::group([ 'middleware' => 'auth' ], function(){
     Route::get('/home', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
     Route::get('/tela/cadastrar', ['as'=>'site.cadastrar', 'uses'=>'Demanda\CadastroController@IndexNovoCadastro']);
     Route::post('/cadastrar/demanda', ['as'=>'cadastrar.demanda', 'uses'=>'Demanda\CadastroController@CadastrarNovaDemanda']);
+    Route::get('/visualizar/demanda/{id}', ['as'=>'visualizar.demanda', 'uses'=>'Demanda\CadastroController@VisualizarDemanda']);
     Route::get('/detalhes/demanda/{id}', ['as'=>'detalhes.demanda', 'uses'=>'Demanda\CadastroController@detalhes']);
     Route::post('/editar/cadastro/demanda/{id}', ['as'=>'editar.demanda', 'uses'=>'Demanda\CadastroController@EditarDemanda']);
     Route::get('/excluir/{id}', ['as'=>'excluir', 'uses'=>'Demanda\CadastroController@excluir']);

@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <p class="text-light m-0 text-center pt-1">&copy; Tudo o que quiser colocar aqui</p>
+                    <p class="text-light m-0 text-center pt-1">&copy; Novacap</p>
                 </div>
                 </div>
             </div>

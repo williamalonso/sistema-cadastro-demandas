@@ -28,6 +28,15 @@ class Demanda extends Model
         return $conn;
     }
 
+    public static function visualizar($id) { //traz os dados do 'id' específico
+        $conn = DB::table('demandas')
+                        ->select('*')
+                        ->from('demandas')
+                        ->where('demandas.id', '=', $id)
+                        ->first();
+        return $conn;
+    }
+
     public static function salva($id, $data) { //função para salvar os dados editados da demanda
         $conn = DB::table('demandas')
                         ->where('demandas.id', '=', $id)

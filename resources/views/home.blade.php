@@ -26,20 +26,20 @@
         </div>
 
     <!-- Tabela -->
-        <div class="table-responsive">
-            <table class="table text-center" id="tabela-principal">
+        <div class="table-responsive alinhar">
+            <table class="table text-center display" id="tabela-principal">
                 <thead>
                     <tr>
                     <th style="display: none">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Telefone</th>
+                    <th style="display: none">Telefone</th>
                     <th scope="col">Data da Visita</th>
                     <th scope="col">Tipo de Demanda</th>
                     <th scope="col">Região Administrativa</th>
-                    <th scope="col">Sei</th>
+                    <th style="display: none">Sei</th>
                     <th scope="col">Data de Conclusão</th>
-                    <th scope="col">Andamento</th>
-                    <th style="col">Observação</th>
+                    <th style="display: none">Andamento</th>
+                    <th style="display: none">Observação</th>
                     <th scope="col">Ação</th>
                     </tr>
                 </thead>
@@ -47,17 +47,38 @@
                     @foreach($registros as $key)
                         <tr>
                             <td style="display: none">{{$key->id}}</td>
-                            <td>{{$key->nome}}</td>
-                            <td>{{$key->telefone}}</td>
-                            <td>{{$key->datavisita}}</td>
-                            <td>{{$key->demanda}}</td>
-                            <td>{{$key->cidade}}</td>
-                            <td>{{$key->sei}}</td>
-                            <td>{{$key->dataconclusao}}</td>
-                            <td>{{$key->andamento}}</td>
-                            <td>{{$key->observacoes}}</td>
+                            <td>
+                                @if ( ($key->nome) != NULL) 
+                                    {{$key->nome}}
+                                @else - @endif
+                            </td>
+                            <td style="display: none">{{$key->telefone}}</td>
+                            <td>
+                                @if ( ($key->datavisita) != NULL) 
+                                    {{ date( 'd/m/Y' , strtotime( $key->datavisita ))}}
+                                @else - @endif
+                            </td>
+                            <td>
+                                @if ( ($key->demanda) != NULL) 
+                                    {{$key->demanda}}
+                                @else - @endif    
+                            </td>
+                            <td>
+                                @if ( ($key->cidade) != NULL) 
+                                    {{$key->cidade}}
+                                @else - @endif  
+                            </td>
+                            <td style="display: none">{{$key->sei}}</td>
+                            <td>
+                                @if ( ($key->dataconclusao) != NULL) 
+                                    {{ date( 'd/m/Y' , strtotime( $key->dataconclusao ))}}
+                                @else - @endif
+                            </td>
+                            <td style="display: none">{{$key->andamento}}</td>
+                            <td style="display: none">{{$key->observacoes}}</td>
                             <td>
                                 <a href= "{{ route('detalhes.demanda', $key->id) }}" type="button"  title="Editar" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                                <a href= "{{ route('visualizar.demanda', $key->id) }}" type="button"  title="Visualizar" class="btn btn-warning"><i class="fas fa-search cor-icone"></i></a>
                                 <a href= "{{ route('excluir', $key->id) }}" type="button"  title="Excluir" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                             </td>
                         </tr>
@@ -66,6 +87,6 @@
             </table>
         </div>
     </main>
-
+    
 
 @endsection
