@@ -20,4 +20,7 @@
         text-align: center;
         margin: auto;
     }
+    .btn {
+        margin: 3px;
+    }
 </style>

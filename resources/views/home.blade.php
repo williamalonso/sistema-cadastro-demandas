@@ -76,10 +76,9 @@
                             </td>
                             <td style="display: none">{{$key->andamento}}</td>
                             <td style="display: none">{{$key->observacoes}}</td>
-                            <td>
+                            <td class="btn-group">
                                 <a href= "{{ route('detalhes.demanda', $key->id) }}" type="button"  title="Editar" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
                                 <a href= "{{ route('visualizar.demanda', $key->id) }}" type="button"  title="Visualizar" class="btn btn-warning"><i class="fas fa-search cor-icone"></i></a>
-                                <a href= "{{ route('excluir', $key->id) }}" type="button"  title="Excluir" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
                             </td>
                         </tr>
                     @endforeach

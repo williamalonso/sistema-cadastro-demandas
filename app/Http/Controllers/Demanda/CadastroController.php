@@ -69,7 +69,7 @@ class CadastroController extends Controller
         return redirect()->route('site.home');
     }
 
-    public function excluir($id){
+    /*public function excluir($id){
         
         if( Demanda::find($id)->delete() ){
             Session::flash('message', 'A demanda foi deletada com sucesso!');
@@ -80,5 +80,5 @@ class CadastroController extends Controller
             Session::flash('alert-class', 'alert-danger');
           }
         return redirect()->route('site.home');
-    }
+    }*/
 }

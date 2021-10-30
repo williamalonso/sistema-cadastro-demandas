@@ -16,28 +16,29 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="nome">Nome</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="id_nome" tabindex="1" name="nome">
+                    <input type="text" class="form-control" id="id_nome" tabindex="1" name="nome" required="required">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="telefone">Telefone</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="number" class="form-control" id="id_telefone" tabindex="2" name="telefone" placeholder="Digite sem traços">
+                    <input type="number" class="form-control" id="id_telefone" tabindex="2" name="telefone" placeholder="Digite sem traços" required="required">
                 </div>
             </div>
 
+            <?php $data = date('Y-m-d'); ?>
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2">Data de Visita</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="date" class="form-control sem_numero" id="id_data_visita" tabindex="3" name="datavisita">
+                    <input type="date" class="form-control sem_numero" id="id_data_visita" tabindex="3" name="datavisita" value="{{$data}}">
                 </div>
             </div>
 
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="tipo_demanda">Tipo de Demanda</label>
                 <div class="col-lg-6">
-                    <select  name="demanda" class="form-control" id="id_tipo_demanda" tabindex="4">
+                    <select  name="demanda" class="form-control" id="id_tipo_demanda" tabindex="4" required="required">
                         <option value="">Selecione uma demanda</option>
                         <option value="1.1 - PAISAGISMO/ARVORES">1.1 - PAISAGISMO/ARVORES</option>
                         <option value="1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES">1.1 - PAISAGISMO/ARVORES > 1.1.1 - CORTE DE ARVORES</option>
@@ -98,7 +99,7 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="regiao_adm">Região Administrativa</label>
                 <div class="col-lg-6">
-                    <select  name="cidade" class="form-control" id="id_regiao_adm" tabindex="5">
+                    <select  name="cidade" class="form-control" id="id_regiao_adm" tabindex="5" required="required">
                         <option value="">Selecione uma região</option>
                         <option value="I - Gama">I - Gama</option>
                         <option value="II - Taguatinga">II - Taguatinga</option>
@@ -153,7 +154,7 @@
             <div class="form-group row mt-5 mb-5">
                 <label class="col-lg-3 control-label text-lg-right pt-2" for="andamento">Andamento</label>
                 <div class="col-lg-6 input-group mb-2">
-                    <input type="text" class="form-control" id="id_andamento" tabindex="8" name="andamento">
+                    <input type="text" class="form-control" id="id_andamento" tabindex="8" name="andamento" required="required">
                 </div>
             </div>
             

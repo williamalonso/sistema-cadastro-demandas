@@ -20,7 +20,7 @@ Route::group([ 'middleware' => 'auth' ], function(){
     Route::get('/visualizar/demanda/{id}', ['as'=>'visualizar.demanda', 'uses'=>'Demanda\CadastroController@VisualizarDemanda']);
     Route::get('/detalhes/demanda/{id}', ['as'=>'detalhes.demanda', 'uses'=>'Demanda\CadastroController@detalhes']);
     Route::post('/editar/cadastro/demanda/{id}', ['as'=>'editar.demanda', 'uses'=>'Demanda\CadastroController@EditarDemanda']);
-    Route::get('/excluir/{id}', ['as'=>'excluir', 'uses'=>'Demanda\CadastroController@excluir']);
+    //Route::get('/excluir/{id}', ['as'=>'excluir', 'uses'=>'Demanda\CadastroController@excluir']);
 });
 
 /* Login */
